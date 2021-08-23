@@ -9,7 +9,7 @@ body {
   align-items: center;
 }
 .main {
-  width: 95vw;
+  width: 100%;
 }
 .event-listner {
   background: linear-gradient(
