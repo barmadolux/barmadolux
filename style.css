@@ -9,8 +9,7 @@ body {
   align-items: center;
 }
 .main {
-  max-width: 75vw;
-  min-width: 50vw;
+  max-width: 95vw;
 }
 .event-listner {
   background: linear-gradient(
