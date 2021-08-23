@@ -1,71 +1,103 @@
-*
-{
-	box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-h1
-{
-	text-align: center;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-section
-{
-	border: 1px solid black;
-	background-color: gray;
-	width: 32%;
-	margin: 6px;
-	float: left;
+.main {
+  max-width: 75vw;
+  min-width: 50vw;
 }
-p
-{
-	text-align: left;
-	padding: 30px;
+.event-listner {
+  background: linear-gradient(
+      to top,
+      rgba(240, 64, 137, 0.595),
+      rgba(8, 121, 17, 0.838)
+    ),
+    url("bg.jpg") center bottom/contain no-repeat;
+  text-align: center;
+  border: 5px outset lightsalmon;
 }
-h4
-{
-	text-align: center;
-	border: 1px solid black;
-	width: 100px;
-	float: right;
-	margin-top: 0px;
+
+.title {
+  color: blue;
+  text-shadow: 1px 2px 2px rgb(252, 251, 251);
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-#h1
-{
-	background-color:mistyrose;
+
+h3 {
+  font-size: 1.01rem;
+  text-shadow: 2px 1px 2px rgb(55, 52, 230);
+  color: rgb(114, 6, 6);
 }
-#h2
-{
-	background-color: rgb(207, 46, 46);
-    color: white;
+
+.number {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(5, 1fr);
 }
-#h3
-{
-	background-color: rgb(226, 199, 79);
+button {
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(50, 205, 50, 0.612);
+  font-weight: bold;
+  margin-bottom: 5px;
+  cursor: pointer;
 }
-@media(min-width:768px) and (max-width:991px)
-{
-	.number1,.number2
-	{
-		width: 48%;
-	}
-	.number3
-	{	
-		float: left;
-		width: 98%;
-	}
+button:hover {
+  background-color: rgba(50, 205, 50, 0.8);
+  border: 1px solid rgb(89, 71, 255);
+  cursor: pointer;
 }
-@media(max-width:767px)
-{
-	.number1
-	{
-		width: 98%;
-	}
-	.number2
-	{
-		float: left;
-		width: 98%;
-	}
-	.number3
-	{
-		float: left;
-		width: 98%;
-	}
+
+.addClassButton {
+  transform: scale(0.8);
+}
+
+.choix {
+  background-color: rgba(0, 0, 0, 0.681);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+.addColorChoix {
+  background-color: rgba(57, 177, 21, 0.755);
+  color: rgb(16, 56, 190);
+}
+.span-1 {
+  background-color: tomato;
+  font-size: 1.5rem;
+  color: white;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.span-1:hover,
+.addClassSpan {
+  background-color: rgba(102, 98, 97, 0.432);
+  color: rgb(49, 54, 4);
+  cursor: pointer;
+}
+
+.date {
+  color: rgb(255, 255, 255);
+  font-size: 0.7rem;
 }
