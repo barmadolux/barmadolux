@@ -113,7 +113,6 @@ h6{
 .item-input{
   text-align: center;
   background: linear-gradient(to right, rgba(29, 96, 197, 0.5), white, rgba(0, 0, 0, 0.477));
-  padding: 5px 5px;
   border-radius: 15px;
   cursor: pointer;
   margin: 15px 0;
@@ -126,6 +125,7 @@ h6{
   border: none;
   display: block;
   width: 100%;
+  padding:15px;
 }
 
 .colorAdd{
@@ -143,13 +143,16 @@ h6{
 .item-container{
     display: flex;
     flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 a{
     /* background-color: rgba(255, 99, 71, 0.316); */
     display: block;
-    place-self: center;
+    /* place-self: center; */
     border-radius: 15px;
     /* border: 1px solid black; */
+    width: 50%;
 }
 .info-main{
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -165,21 +168,13 @@ a{
         width: 100%;
     }
     .item-input{
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         font-weight: bold;
         letter-spacing: 2px;
-        /* width: 180px;
-        height: 40px;
+        /* height: 40px;
         margin: 5px auto; */
     }
     .item-container{
-       
        flex-flow: row wrap;
-       justify-content: space-evenly;
-    }
-    a{
-        display: block;
-        width: 45%;
-        margin: 2px;
     }
 }
