@@ -1,23 +1,26 @@
-const table = {
-    "nom": ["ADJAHO Venance", "19 juillet"],
-    "nom": ["Sourou", "25 août"],
-    "nom": ["APLOGAN Dorcas", "25 août"],
-    "nom": ["Olène", "28 août"],
-    "nom": ["MAFLON Barma", "10 juillet"],
-    "nom": ["APLOGAN Judith", "13 mai"],
-    "nom": ["MAFLON Gisèle", "24 septembre"],
-    "nom": ["ADJAHO Habib", "10 main"],
-    "nom": ["APLOGAN Léa", "28 juin"],
-    "nom": ["AHOUANSE Judicaelle", "19 février"],
-    "nom": ["AHOUANSE Judith", "19 février"],
-    "nom": ["AHOUANSE Linite", "18 mai"],
-    "nom": ["APLOGAN Vicariat", "6 main"],
-    "nom": ["AHOUANSE Judicaelle", "25 août"],
-    "nom": ["TOHOUN Loick", "7 janvier"],
-    "nom": ["TOHOUN Zackiel", "5 juillet"],
-};
+const table = [
+    { "nom": "ADJAHO Venance", "annif": "19 juillet" },
+    { "nom": "Sourou", "annif": "25 août" },
+    { "nom": "APLOGAN Dorcas", "annif": "25 août" },
+    { "nom": "Olène", "annif": "28 août" },
+    { "nom": "MAFLON Barma", "annif": "10 juillet" },
+    { "nom": "APLOGAN Judith", "annif": "13 mai" },
+    { "nom": "MAFLON Gisèle", "annif": "24 septembre" },
+    { "nom": "ADJAHO Habib", "annif": "10 main" },
+    { "nom": "APLOGAN Léa", "annif": "28 juin" },
+    { "nom": "AHOUANSE Judicaelle", "annif": "19 février" },
+    { "nom": "AHOUANSE Judith", "annif": "19 février" },
+    { "nom": "AHOUANSE Linite", "annif": "18 mai" },
+    { "nom": "APLOGAN Vicariat", "annif": "6 main" },
+    { "nom": "MAFLON Charles", "annif": "25 août" },
+    { "nom": "TOHOUN Loick", "annif": "7 janvier" },
+    { "nom": "TOHOUN Zackiel", "annif": "5 juillet" },
+];
 
-console.log(table.nom[0] + " " + table.nom[1]);
+table.forEach(element => {
+    console.log(element.nom, element.annif);
+
+})
 
 const color = ["blue", "gray", "green", "rgba(5, 65, 65, 0.907)", "teal"];
 const bienvenue = document.querySelector("h1");
