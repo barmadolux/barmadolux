@@ -70,10 +70,10 @@ h3{
     text-align: center;
     user-select: none;
     font-size: 0.8rem;
-    text-shadow: 1px 1px 0px tomato;
+    text-shadow: 1px 1px 4px tomato;
     color: rgb(6, 66, 68);
     border-radius: 150px;
-    padding: 5px;
+    padding: 10px;
     background: linear-gradient(to right, rgba(29, 96, 197, 0.5), white, rgba(0, 0, 0, 0.477));
 }
 .container-h3{
@@ -136,7 +136,7 @@ h6{
 }
 
 .info-head{
-    text-shadow: 1px 1px 0px tomato;
+    text-shadow: 1px 1px 4px tomato;
     color: rgb(6, 66, 68);
 }
 .item-container{
@@ -169,7 +169,7 @@ a{
     .item-input{
         font-size: 0.6rem;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         /* height: 40px;
         margin: 5px auto; */
     }
