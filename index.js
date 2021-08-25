@@ -52,15 +52,16 @@ input.forEach(i => {
 
 });
 
-// (() => {
-//     let i = -1;
-//     let temps = setInterval(() => {
-//         i++;
-//         bienvenue.style.color = color[i];
-//         h1.style.boxShadow = `2px 2px 5px white, 2px 2px 5px ${color[i]}`;
-//         if (i === color.length) {
-//             i = -1;
-//         };
-//     }, 1000)
-// })();
+(() => {
+    let i = -1;
+    let temps = setInterval(() => {
+        i++;
+        bienvenue.style.color = color[i];
+        h1.style.boxShadow = `2px 2px 5px white, 2px 2px 5px ${color[i]}`;
+        if (i === color.length) {
+            i = -1;
+        };
+    }, 1000)
+})();
+
 
