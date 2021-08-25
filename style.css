@@ -114,7 +114,6 @@ h6{
   background: linear-gradient(to right, rgba(29, 96, 197, 0.5), white, rgba(0, 0, 0, 0.477));
   border-radius: 15px;
   cursor: pointer;
-  margin: 15px 0;
   font-weight: bold;
   color: rgba(3, 1, 22, 0.962);
   text-shadow: 1px 1px 3px white;
@@ -146,12 +145,12 @@ h6{
     align-items: center;
 }
 a{
-    /* background-color: rgba(255, 99, 71, 0.316); */
     display: block;
-    /* place-self: center; */
     border-radius: 15px;
-    /* border: 1px solid black; */
     width: 50%;
+    margin: 0;
+    padding: 0;
+   
 }
 .info-main{
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -167,11 +166,9 @@ a{
         width: 100%;
     }
     .item-input{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         font-weight: bold;
         letter-spacing: 1px;
-        /* height: 40px;
-        margin: 5px auto; */
     }
     .item-container{
        flex-flow: row wrap;
