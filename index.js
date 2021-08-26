@@ -10,30 +10,34 @@ const table = [
     { "nom": "ADJAHO Venance", "annif": "19 juillet", "photo": "avenance.png" },
     { "nom": "Sourou", "annif": "25 août", "photo": "sourou.png" },
     { "nom": "APLOGAN Dorcas", "annif": "25 août", "photo": "adorcas.png" },
-    { "nom": "Olène", "annif": "28 août", "photo": "null.jpg" },
+    { "nom": "Olène", "annif": "28 août", "photo": "tolene.png" },
     { "nom": "MAFLON Barma", "annif": "10 juillet", "photo": "mbarma.png" },
     { "nom": "APLOGAN Judith", "annif": "13 mai", "photo": "null.jpg" },
-    { "nom": "MAFLON Gisèle", "annif": "24 septembre", "photo": "null.jpg" },
-    { "nom": "ADJAHO Habib", "annif": "10 main", "photo": "null.jpg" },
+    { "nom": "MAFLON Gisèle", "annif": "24 septembre", "photo": "mgisele.png" },
+    { "nom": "ADJAHO Habib", "annif": "10 mai", "photo": "null.jpg" },
     { "nom": "APLOGAN Léa", "annif": "28 juin", "photo": "null.jpg" },
-    { "nom": "AHOUANSE Judicaelle", "annif": "19 février", "photo": "null.jpg" },
+    { "nom": "AHOUANSE Judicaelle", "annif": "19 février", "photo": "ajudicaelle.png" },
     { "nom": "AHOUANSE Judith", "annif": "19 février", "photo": "ajudi.png" },
     { "nom": "AHOUANSE Linite", "annif": "18 mai", "photo": "alinite.png" },
-    { "nom": "APLOGAN Vicariat", "annif": "6 main", "photo": "avicariat.png" },
+    { "nom": "APLOGAN Vicariat", "annif": "6 mai", "photo": "avicariat.png" },
     { "nom": "MAFLON Charles", "annif": "25 août", "photo": "mcharles.png" },
     { "nom": "TOHOUN Loick", "annif": "7 janvier", "photo": "null.jpg" },
     { "nom": "TOHOUN Zackiel", "annif": "5 juillet", "photo": "null.jpg" },
+    { "nom": "AHOUANSE Dossou Gérard", "annif": "4 octobre", "photo": "ado.png" },
+    { "nom": "AHOUANSE David", "annif": "23 septembre", "photo": "null.jpg" },
 ];
 
-infoMain.innerHTML = table.map((user) =>
-    `
+infoMain.innerHTML = table
+    .sort((a, b) => (b - a))
+    .map((user) =>
+        `
     <div class='dispo'>
         <h5>${user.nom}</h5>
         <p class="dispoPara">${user.annif}</p>
         <div class='ok'><img src="${user.photo}" class='image' "></div>
     </div>
     `
-).join("");
+    ).join("");
 
 
 
