@@ -29,8 +29,8 @@ infoMain.innerHTML = table.map((user) =>
     `
     <div class='dispo'>
         <h5>${user.nom}</h5>
-        <p>${user.annif}</p>
-        <img src="${user.photo}" class='image' ">
+        <p class="dispoPara">${user.annif}</p>
+        <div class='ok'><img src="${user.photo}" class='image' "></div>
     </div>
     `
 ).join("");
