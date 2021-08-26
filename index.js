@@ -5,12 +5,13 @@ const input = document.querySelectorAll("input");
 const h1 = document.querySelector("h1");
 const info = document.querySelector(".info-head");
 const infoMain = document.querySelector(".info-main");
+const date = new Date();
 
 const table = [
     { "nom": "ADJAHO Venance", "annif": "19 juillet", "photo": "avenance.png" },
     { "nom": "Sourou", "annif": "25 août", "photo": "sourou.png" },
     { "nom": "APLOGAN Dorcas", "annif": "25 août", "photo": "adorcas.png" },
-    { "nom": "Olène", "annif": "28 août", "photo": "tolene.png" },
+    { "nom": "TOHOUN Olène", "annif": "28 août", "photo": "tolene.png" },
     { "nom": "MAFLON Barma", "annif": "10 juillet", "photo": "mbarma.png" },
     { "nom": "APLOGAN Judith", "annif": "13 mai", "photo": "null.jpg" },
     { "nom": "MAFLON Gisèle", "annif": "24 septembre", "photo": "mgisele.png" },
@@ -21,25 +22,29 @@ const table = [
     { "nom": "AHOUANSE Linite", "annif": "18 mai", "photo": "alinite.png" },
     { "nom": "APLOGAN Vicariat", "annif": "6 mai", "photo": "avicariat.png" },
     { "nom": "MAFLON Charles", "annif": "25 août", "photo": "mcharles.png" },
-    { "nom": "TOHOUN Loick", "annif": "7 janvier", "photo": "null.jpg" },
-    { "nom": "TOHOUN Zackiel", "annif": "5 juillet", "photo": "null.jpg" },
+    { "nom": "TOHOUN Loic", "annif": "7 janvier", "photo": "tloic.png" },
+    { "nom": "TOHOUN Zackiel", "annif": "5 juillet", "photo": "tzackiel.png" },
     { "nom": "AHOUANSE Dossou Gérard", "annif": "4 octobre", "photo": "ado.png" },
     { "nom": "AHOUANSE David", "annif": "23 septembre", "photo": "null.jpg" },
     { "nom": "MAFLON Géoffroy", "annif": "Non définie", "photo": "mgeofroi.png" },
     { "nom": "MAFLON Carine", "annif": "Non définie", "photo": "null.jpg" },
 ];
 
-infoMain.innerHTML = table
-    .sort((a, b) => (b - a))
-    .map((user) =>
-        `
-    <div class='dispo'>
-        <h5>${user.nom}</h5>
-        <p class="dispoPara">Annif : ${user.annif}</p>
-        <div class='ok'><img src="${user.photo}" class='image' "></div>
-    </div>
-    `
-    ).join("");
+
+
+const newDate = (dat) => {
+    let ndate = new Date(date).toLocaleDateString("FR-fr", {
+        month: "long",
+        day: "numeric"
+    })
+    return ndate;
+}
+
+let date2 = "1 janvier 2021";
+let date3 = "3 janvier 2021";
+// let date4 = date3.getTime() - date2.getTime();
+
+
 
 
 
@@ -50,6 +55,16 @@ input.forEach(i => {
         i.classList.toggle("colorAdd");
         info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
         if (valeur === "ANNIVERSAIRES") {
+            infoMain.innerHTML = table
+                .map((user) =>
+                    `
+                <div class='dispo'>
+                    <h5>${user.nom}</h5>
+                    <p class="dispoPara">Annif : ${user.annif}</p>
+                    <p class="dispoPara second">Dans: ${newDate(date)} jours</p>
+                </div>
+                 `
+                ).join("");
             infoMain.classList.add("addInfoMain");
         }
         else if (valeur === "PARTICIPATION") {
@@ -59,6 +74,16 @@ input.forEach(i => {
 
         }
         else if (valeur === "LISTE DES MEMBRES") {
+            infoMain.classList.add("addInfoMain");
+            infoMain.innerHTML = table
+                .map((user) =>
+                    `
+                <div class='dispo'>
+                    <h5>${user.nom}</h5> 
+                    <div class='ok'><img src="${user.photo}" class='image' "></div>        
+                </div>
+                 `
+                ).join("");
 
         }
 

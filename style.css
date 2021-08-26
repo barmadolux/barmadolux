@@ -197,6 +197,10 @@ img{
     justify-content: center;
     align-items: center;
 }
+.dispoPara.second{
+    color: rgb(240, 11, 11);
+}
+
 @media screen and (max-width : 550px) {
     main{
         width: 100%;
