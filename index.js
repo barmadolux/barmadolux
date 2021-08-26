@@ -56,7 +56,6 @@ input.forEach(i => {
 
         }
 
-
     })
 
 });
