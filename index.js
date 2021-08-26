@@ -33,7 +33,7 @@ infoMain.innerHTML = table
         `
     <div class='dispo'>
         <h5>${user.nom}</h5>
-        <p class="dispoPara">${user.annif}</p>
+        <p class="dispoPara">Annif : ${user.annif}</p>
         <div class='ok'><img src="${user.photo}" class='image' "></div>
     </div>
     `

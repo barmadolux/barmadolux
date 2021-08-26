@@ -182,7 +182,9 @@ h5{
 }
 .dispoPara{
     text-align: center;
-    color: rgba(15, 8, 77, 0.786);
+    color: rgba(30, 31, 28, 0.979);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
 
 img{
