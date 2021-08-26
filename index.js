@@ -37,29 +37,29 @@ infoMain.innerHTML = table.map((user) =>
 
 
 
-// input.forEach(i => {
-//     i.addEventListener("click", (e) => {
-//         let valeur = e.target.value;
-//         i.classList.toggle("colorAdd");
-//         info.innerHTML = `< span class="info-head" > : ${i.value} </span > `;
+input.forEach(i => {
+    i.addEventListener("click", (e) => {
+        let valeur = e.target.value;
 
-//         if (valeur === "ANNIVERSAIRES") {
+        i.classList.toggle("colorAdd");
+        info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
+        if (valeur === "ANNIVERSAIRES") {
+            infoMain.classList.add("addInfoMain");
+        }
+        else if (valeur === "PARTICIPATION") {
 
-//         }
-//         else if (valeur === "PARTICIPATION") {
+        }
+        else if (valeur === "EVENEMENTS") {
 
-//         }
-//         else if (valeur === "EVENEMENTS") {
+        }
+        else if (valeur === "LISTE DES MEMBRES") {
 
-//         }
-//         else if (valeur === "LISTE DES MEMBRES") {
-
-//         }
+        }
 
 
-//     })
+    })
 
-// });
+});
 
 (() => {
     let i = -1;
