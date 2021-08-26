@@ -25,6 +25,8 @@ const table = [
     { "nom": "TOHOUN Zackiel", "annif": "5 juillet", "photo": "null.jpg" },
     { "nom": "AHOUANSE Dossou Gérard", "annif": "4 octobre", "photo": "ado.png" },
     { "nom": "AHOUANSE David", "annif": "23 septembre", "photo": "null.jpg" },
+    { "nom": "MAFLON Géoffroy", "annif": "Non définie", "photo": "mgeofroi.png" },
+    { "nom": "MAFLON Carine", "annif": "Non définie", "photo": "null.jpg" },
 ];
 
 infoMain.innerHTML = table
