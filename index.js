@@ -97,8 +97,8 @@ const functionAnnif = (jourString) => {
     return getJour;
 };
 
-input.forEach(i => {
 
+input.forEach(i => {
     i.addEventListener("click", (e) => {
         let valeur = e.target.value;
         i.classList.add("colorAdd");
@@ -106,7 +106,6 @@ input.forEach(i => {
         if (valeur === "ANNIVERSAIRES") {
             if (i.type === "click") {
                 console.log("bien fait");
-
             }
             infoMain.innerHTML = table
                 .map((user) =>
