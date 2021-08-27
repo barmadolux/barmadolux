@@ -7,7 +7,7 @@
 
 body{
     width: 100%;
-    background: linear-gradient(to top, rgba(151, 10, 10, 0.671), rgba(255, 255, 255, 0.947), rgba(34, 99, 8, 0.577)), url("bg.png") no-repeat center/cover;
+    background: linear-gradient(to top, rgba(63, 74, 223, 0.212), rgba(255, 255, 255, 0.947), rgba(34, 99, 8, 0.577)), url("bg.png") no-repeat center/cover;
 }
 
 .app{
@@ -168,15 +168,28 @@ a{
 .dispo{
    width: 48%;
    background-color: rgba(167, 65, 47, 0.126);
-   margin: 2px;
+   margin: 3px;
+   padding: 5px;
    border-radius: 10px;
    /* place-self: center; */
+   position: relative;
 
 }
+/* .dispo::before{
+    content: "";
+    width: 100px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.514);
+    position: absolute;
+    top: 85%;
+    left: 25%;
+    transform: translateY(-50%);
+    text-align: center;
+} */
 h5{
     text-align: center;
     font-size: 0.9rem;
-    padding-top: 10px;
+    padding-top: 5px;
     color: rgb(20, 4, 94);
     letter-spacing: 1px;
 }
@@ -189,7 +202,7 @@ h5{
 
 img{
     width: 80%;
-    height: 120px;
+    height: 110px;
     border-radius: 50%;
 }
 .ok{

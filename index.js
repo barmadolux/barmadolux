@@ -40,9 +40,7 @@ const newDate = (dat) => {
     return ndate;
 }
 
-let date2 = "1 janvier 2021";
-let date3 = "3 janvier 2021";
-// let date4 = date3.getTime() - date2.getTime();
+
 
 
 
@@ -52,9 +50,13 @@ input.forEach(i => {
     i.addEventListener("click", (e) => {
         let valeur = e.target.value;
 
-        i.classList.toggle("colorAdd");
+        i.classList.add("colorAdd");
         info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
         if (valeur === "ANNIVERSAIRES") {
+            if (i.type === "click") {
+                console.log("bien fait");
+
+            }
             infoMain.innerHTML = table
                 .map((user) =>
                     `
