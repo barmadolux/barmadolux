@@ -7,7 +7,7 @@
 
 body{
     width: 100%;
-    background: linear-gradient(to top, rgba(63, 74, 223, 0.212), rgba(255, 255, 255, 0.947), rgba(34, 99, 8, 0.577)), url("bg.png") no-repeat center/cover;
+    background: linear-gradient(to top, rgba(63, 74, 223, 0.212), rgba(255, 255, 255, 0.947), rgba(34, 99, 8, 0.577)), url("./image/bg.png") no-repeat center/cover;
 }
 
 .app{
