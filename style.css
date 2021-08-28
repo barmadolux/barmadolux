@@ -202,7 +202,9 @@ h5{
 
 img{
     width: 80%;
+    max-width: 150px;
     height: 110px;
+
     border-radius: 50%;
 }
 .ok{
