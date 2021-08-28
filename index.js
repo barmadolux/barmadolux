@@ -6,6 +6,7 @@ const h1 = document.querySelector("h1");
 const info = document.querySelector(".info-head");
 const infoMain = document.querySelector(".info-main");
 const inputContainer = document.querySelector(".item-container");
+
 const date = new Date();
 
 
@@ -33,6 +34,63 @@ const table = [
     { "nom": "MEHOU Cédric", "annif": "1/1", "photo": "./image/null.jpg" },
     { "nom": "ADJAHO Habib", "annif": "05/10", "photo": "./image/null.jpg" },
 ];
+
+
+const functionAnnif = (jourString) => {
+    let getJour = new Date(jourString).toLocaleDateString("FR-fr", {
+        month: "long",
+        day: "numeric"
+    })
+    return getJour;
+};
+
+input.forEach(i => {
+    i.addEventListener("click", (e) => {
+        infoMain.classList.add("addInfoMain");
+        let valeur = e.target.value;
+        let fre = i.parentNode.parentNode;
+        let gour = fre.querySelector(".item-input.scaleAdd");
+
+        if (!gour) {
+            i.classList.add("scaleAdd");
+        }
+        else {
+            gour.classList.remove('scaleAdd');
+            i.classList.add("scaleAdd");
+        }
+        info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
+
+        if (valeur === "ANNIVERSAIRES") {
+            infoMain.innerHTML = table
+                .map((user) =>
+                    `  
+                <div class='dispo'>
+                    <h5>${user.nom}</h5>
+                    <p class="dispoPara">Annif : ${functionAnnif(user.annif)}</p>
+                    <p class="dispoPara second">${functionDate(user.annif)}</p>
+                </div>
+                 `
+                ).join("");
+        }
+        else if (valeur === "PARTICIPATION") {
+            infoMain.innerHTML = "";
+        }
+        else if (valeur === "EVENEMENTS") {
+            infoMain.innerHTML = "";
+        }
+        else if (valeur === "LISTE DES MEMBRES") {
+            infoMain.innerHTML = table
+                .map((user) =>
+                    `
+                <div class='dispo'>
+                    <h5>${user.nom}</h5> 
+                    <div class='ok'><img src="${user.photo}" class='image' "></div>        
+                </div>
+                 `
+                ).join("");
+        }
+    })
+});
 
 const functionDate = (dateString) => {
     let msg = null;
@@ -71,6 +129,9 @@ const functionDate = (dateString) => {
                 msg = `Dans ${nombreJour} jours`;
             }
         } else {
+            let hoy = document.querySelectorAll('.dispo .dispoPara.second');
+            console.log(hoy);
+
             let do1 = Math.ceil(Math.floor(Math.abs(nombreJour / 30)));
             if (do1 === 0) {
                 do1 = "";
@@ -95,62 +156,9 @@ const functionDate = (dateString) => {
     return msg;
 };
 
-const functionAnnif = (jourString) => {
-    let getJour = new Date(jourString).toLocaleDateString("FR-fr", {
-        month: "long",
-        day: "numeric"
-    })
-    return getJour;
-};
 
 
-input.forEach(i => {
-    i.addEventListener("click", (e) => {
-        infoMain.classList.add("addInfoMain");
-        let valeur = e.target.value;
-        let fre = i.parentNode.parentNode;
-        let gour = fre.querySelector(".item-input.scaleAdd");
 
-        if (!gour) {
-            i.classList.add("scaleAdd");
-        }
-        else {
-            gour.classList.remove('scaleAdd');
-            i.classList.add("scaleAdd");
-        }
-        info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
-
-        if (valeur === "ANNIVERSAIRES") {
-            infoMain.innerHTML = table
-                .map((user) =>
-                    `  
-                <div class='dispo'>
-                    <h5>${user.nom}</h5>
-                    <p class="dispoPara">Annif : ${functionAnnif(user.annif)}</p>
-                    <p class="dispoPara second">${functionDate(user.annif)}</p>
-                </div>
-                 `
-                ).join("");
-        }
-        else if (valeur === "PARTICIPATION") {
-
-        }
-        else if (valeur === "EVENEMENTS") {
-
-        }
-        else if (valeur === "LISTE DES MEMBRES") {
-            infoMain.innerHTML = table
-                .map((user) =>
-                    `
-                <div class='dispo'>
-                    <h5>${user.nom}</h5> 
-                    <div class='ok'><img src="${user.photo}" class='image' "></div>        
-                </div>
-                 `
-                ).join("");
-        }
-    })
-});
 
 (() => {
     let i = -1;
@@ -163,3 +171,4 @@ input.forEach(i => {
         };
     }, 1000)
 })();
+
