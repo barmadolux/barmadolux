@@ -5,12 +5,13 @@ const input = document.querySelectorAll("input");
 const h1 = document.querySelector("h1");
 const info = document.querySelector(".info-head");
 const infoMain = document.querySelector(".info-main");
+const inputContainer = document.querySelector(".item-container");
 const date = new Date();
 
 
 const table = [
     { "nom": "ADJAHO Venance", "annif": "07/19", "photo": "./image/avenance.png" },
-    { "nom": "LINHOUME Joinaisse R. Sourou", "annif": "08/25", "photo": "./image/sourou.png" },
+    { "nom": "LINHOUME Sourou", "annif": "08/25", "photo": "./image/sourou.png" },
     { "nom": "AHOUANSE Linite", "annif": "05/18", "photo": "./image/alinite.png" },
     { "nom": "MAFLON Charles", "annif": "08/25", "photo": "./image/mcharles.png" },
     { "nom": "TOHOUN Olène", "annif": "08/28", "photo": "./image/tolene.png" },
@@ -65,7 +66,7 @@ const functionDate = (dateString) => {
     } else {
         if (nombreJour < 30) {
             if (nombreJour === 1) {
-                msg = `Dans 24 heures`;
+                msg = `Dans quelques heures`;
             } else {
                 msg = `Dans ${nombreJour} jours`;
             }
@@ -105,14 +106,21 @@ const functionAnnif = (jourString) => {
 
 input.forEach(i => {
     i.addEventListener("click", (e) => {
+        infoMain.classList.add("addInfoMain");
         let valeur = e.target.value;
-        i.classList.add("scaleAdd");
+        let fre = i.parentNode.parentNode;
+        let gour = fre.querySelector(".item-input.scaleAdd");
+
+        if (!gour) {
+            i.classList.add("scaleAdd");
+        }
+        else {
+            gour.classList.remove('scaleAdd');
+            i.classList.add("scaleAdd");
+        }
         info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
 
         if (valeur === "ANNIVERSAIRES") {
-            if (i.type === "click") {
-                console.log("bien fait");
-            }
             infoMain.innerHTML = table
                 .map((user) =>
                     `  
@@ -123,7 +131,6 @@ input.forEach(i => {
                 </div>
                  `
                 ).join("");
-            infoMain.classList.add("addInfoMain");
         }
         else if (valeur === "PARTICIPATION") {
 
@@ -132,7 +139,6 @@ input.forEach(i => {
 
         }
         else if (valeur === "LISTE DES MEMBRES") {
-            infoMain.classList.add("addInfoMain");
             infoMain.innerHTML = table
                 .map((user) =>
                     `
