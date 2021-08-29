@@ -236,6 +236,7 @@ img{
    color: rgb(160, 11, 36);
    margin: 10px 0;
    cursor: pointer;
+   user-select: none;
 }
 .change{
     color: rgb(7, 76, 78);
