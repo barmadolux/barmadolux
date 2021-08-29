@@ -6,8 +6,12 @@ const h1 = document.querySelector("h1");
 const info = document.querySelector(".info-head");
 const infoMain = document.querySelector(".info-main");
 const inputContainer = document.querySelector(".item-container");
+const para = document.querySelector(".dispoPara.second");
 
 const date = new Date();
+
+
+
 
 
 const table = [

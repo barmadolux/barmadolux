@@ -223,7 +223,7 @@ img{
 }
 
 .lool{
-   background: linear-gradient(to right, rgba(132, 228, 132, 0.5), rgba(255, 255, 255, 0.989));
+   background: linear-gradient(to right, rgba(255, 99, 71, 0.507), rgba(172, 226, 121, 0.507), rgba(255, 255, 255, 0.589));
    box-shadow:2px 2px 0 rgb(160, 11, 36);
    width: 120px;
    height: 120px;
@@ -238,8 +238,8 @@ img{
    cursor: pointer;
 }
 .change{
-    color: rgb(32, 198, 204);
-    box-shadow:2px 2px 0 rgb(32, 198, 204);
+    color: rgb(7, 76, 78);
+    box-shadow:2px 2px 0 rgb(7, 76, 78);
 }
 
 @media screen and (max-width : 550px) {
