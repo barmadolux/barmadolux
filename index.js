@@ -76,7 +76,12 @@ input.forEach(i => {
             infoMain.innerHTML = "";
         }
         else if (valeur === "EVENEMENTS") {
-            infoMain.innerHTML = "";
+            infoMain.innerHTML = `  
+            <div class='eventDispo'>
+                <div class="lool">HEUREUX</div>
+                <div class="lool change">MALHEUREUX</div>
+            </div>
+             `;
         }
         else if (valeur === "LISTE DES MEMBRES") {
             infoMain.innerHTML = table
@@ -84,7 +89,7 @@ input.forEach(i => {
                     `
                 <div class='dispo'>
                     <h5>${user.nom}</h5> 
-                    <div class='ok'><img src="${user.photo}" class='image' "></div>        
+                    <div class='ok'><img src="${user.photo}" ></div>        
                 </div>
                  `
                 ).join("");
@@ -99,6 +104,8 @@ const functionDate = (dateString) => {
     if (nombreJour <= 0) {
         if (nombreJour === 0) {
             msg = "Joyeux Anniversaire";
+        } else if (Math.abs(nombreJour) === 1) {
+            msg = "Passé hier";
         }
         else if (Math.abs(nombreJour) < 30) {
             msg = `Passé il y a ${Math.abs(nombreJour)} jours`;
@@ -155,10 +162,6 @@ const functionDate = (dateString) => {
 
     return msg;
 };
-
-
-
-
 
 (() => {
     let i = -1;
