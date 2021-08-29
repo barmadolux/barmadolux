@@ -78,8 +78,8 @@ input.forEach(i => {
         else if (valeur === "EVENEMENTS") {
             infoMain.innerHTML = `  
             <div class='eventDispo'>
-                <div class="lool">HEUREUX</div>
-                <div class="lool change">MALHEUREUX</div>
+                <div class="lool change">HEUREUX</div>
+                <div class="lool">MALHEUREUX</div>
             </div>
              `;
         }

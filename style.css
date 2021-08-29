@@ -223,8 +223,8 @@ img{
 }
 
 .lool{
-   background: linear-gradient(to right, rgba(0, 0, 0, 0.77), white);
-   box-shadow:2px 4px 0 pink;
+   background: linear-gradient(to right, rgba(132, 228, 132, 0.5), rgba(255, 255, 255, 0.989));
+   box-shadow:2px 2px 0 rgb(160, 11, 36);
    width: 120px;
    height: 120px;
    border-radius: 50%;
@@ -233,9 +233,13 @@ img{
    justify-content: center;
    font-size: 1rem;
    font-weight: bold;
-   color: pink;
+   color: rgb(160, 11, 36);
    margin: 10px 0;
    cursor: pointer;
+}
+.change{
+    color: rgb(32, 198, 204);
+    box-shadow:2px 2px 0 rgb(32, 198, 204);
 }
 
 @media screen and (max-width : 550px) {
