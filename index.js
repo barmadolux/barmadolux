@@ -28,9 +28,9 @@ const table = [
     { "nom": "MAFLON Géoffroy", "annif": "01/01", "photo": "./image/mgeofroi.png" },
     { "nom": "AGBON Furginette", "annif": "01/01", "photo": "./image/afurginette.png" },
     { "nom": "AHOUANSE David", "annif": "09/23", "photo": "./image/adavid.png" },
-    { "nom": "APLOGAN Judith", "annif": "05/13", "photo": "./image/null.jpg" },
+    { "nom": "APLOGAN Judith", "annif": "05/13", "photo": "./image/ajudithi.png" },
     { "nom": "MAFLON Carine", "annif": "01/01", "photo": "./image/mcarine.png" },
-    { "nom": "APLOGAN Léa", "annif": "06/28", "photo": "./image/null.jpg" },
+    { "nom": "APLOGAN Léa", "annif": "06/28", "photo": "./image/alea.png" },
     { "nom": "MEHOU Cédric", "annif": "1/1", "photo": "./image/null.jpg" },
     { "nom": "ADJAHO Habib", "annif": "05/10", "photo": "./image/null.jpg" },
 ];
