@@ -10,10 +10,6 @@ const para = document.querySelector(".dispoPara.second");
 
 const date = new Date();
 
-
-
-
-
 const table = [
     { "nom": "ADJAHO Venance", "annif": "07/19", "photo": "./image/avenance.png" },
     { "nom": "LINHOUME Sourou", "annif": "08/25", "photo": "./image/sourou.png" },
@@ -81,11 +77,18 @@ input.forEach(i => {
         }
         else if (valeur === "EVENEMENTS") {
             infoMain.innerHTML = `  
-            <div class='eventDispo'>
-                <div class="lool change">HEUREUX</div>
-                <div class="lool">MALHEUREUX</div>
-            </div>
-             `;
+                <div class="lool">
+                    <div class="debil">
+                        <input class='' type="checkbox" id="nom">
+                        <label for="nom" >HEUREUX</lable>
+                    </div>
+                   
+                    <div class="debil">
+                        <input class='' type="checkbox" id="surnom">
+                        <label for="surnom">MALHEUREUX</lable>
+                    </div>  
+                </div>
+             `
         }
         else if (valeur === "LISTE DES MEMBRES") {
             infoMain.innerHTML = table
