@@ -113,7 +113,6 @@ h6{
     }
 }
 .item-input{
-  text-align: center;
   background: linear-gradient(to right, rgba(29, 96, 197, 0.5), white, rgba(0, 0, 0, 0.477));
   border-radius: 15px;
   cursor: pointer;
@@ -124,9 +123,9 @@ h6{
   transition: 0.3s ease-in-out;
   outline: none;
   border: none;
-  display: block;
-  width: 100%;
-  padding:15px;
+  width: 150px;
+  padding: 10px;
+  margin: 10px auto;
 }
 
 .scaleAdd{
@@ -143,8 +142,8 @@ h6{
 }
 .item-container{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: center;
 }
 a{

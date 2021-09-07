@@ -47,11 +47,9 @@ const functionAnnif = (jourString) => {
 const afficherEvenement = (info) => {
     let evenementMal = { premier: "Déces de Yvette MAFLON le 10/08/2021" }
     let evenementHeur = { deuc: "Déces de Yvette MAFLON le 10/08/2021" }
-
+    const vivi = document.getElementById("heureux");
     let heurEvent = () => {
-        let vivi = document.getElementById("heureux");
-        console.log("Je suis ok ");
-
+        console.log(vivi);
     }
 
     let malEvent = () => {
