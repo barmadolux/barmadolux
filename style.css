@@ -17,8 +17,11 @@ body{
     height: 100%;
 }
 
-.item{
+.itemCool{
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 header{
@@ -259,7 +262,62 @@ img{
     background-color: rgba(172, 255, 47, 0.5);
 }
 
-
+.footer-input{
+    display: block;
+    padding: 10px 5px;
+    margin: 10px;
+    width: 93%;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    outline: none;
+}
+.footer-input:focus{
+    border: 2px solid rgb(10, 126, 155);
+}
+.formulaire{
+    width: 80vw;
+    max-width: 400px;
+    border: 3px solid rgba(10, 126, 155, 0.416);
+    border-radius: 10px;
+    background-color: rgba(187, 76, 12, 0.247);
+    position: relative;
+    margin: 30px 0;
+}
+.formulaire::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(10, 126, 155);
+    border-radius: 50%;
+    left: 43%;
+    top: -40px;
+    transform: translate(-50% -50%);
+}
+textarea:focus{
+    border: 2px solid rgb(10, 126, 155);
+}
+textarea{
+    border: 2px solid transparent;    
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    width: 93%;
+    resize: none;
+}
+button{
+display: block;
+margin: 5px auto;
+padding: 10px 25px;
+background-color: rgb(10, 126, 155);
+border-radius: 5px;
+cursor: pointer;
+color: rgb(131, 245, 86);
+font-size: 1.2rem;
+letter-spacing: 1px;
+font-weight: bold;
+}
 
 @media screen and (max-width : 550px) {
     main{
@@ -284,3 +342,4 @@ img{
         margin: 0;
     }
 }
+

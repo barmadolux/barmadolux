@@ -1,7 +1,7 @@
 const color = ["blue", "gray", "green", "rgba(5, 65, 65, 0.907)", "teal"];
 const bienvenue = document.querySelector("h1");
 const contentH1 = document.querySelector(".container-h1");
-const input = document.querySelectorAll("input");
+const input = document.querySelectorAll(".item-input");
 const h1 = document.querySelector("h1");
 const info = document.querySelector(".info-head");
 const infoMain = document.querySelector(".info-main");
