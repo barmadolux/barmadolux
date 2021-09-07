@@ -319,13 +319,12 @@ font-weight: bold;
 }
 
 .trois{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     background-color: rgba(61, 97, 6, 0.738);
     border-radius: 15px;
     font-weight: bold;
     color: rgb(255, 255, 255);
-    padding: 5px;
-    margin: 5px;
+    padding: 4px;
 }
 @media screen and (max-width : 600px) {
     main{
