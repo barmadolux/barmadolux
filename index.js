@@ -49,7 +49,6 @@ const afficherEvenement = (info) => {
     let evenementHeur = { deuc: "Déces de Yvette MAFLON le 10/08/2021" }
     const vivi = document.getElementById("heureux");
     let heurEvent = () => {
-        console.log(vivi);
     }
 
     let malEvent = () => {
@@ -111,7 +110,7 @@ input.forEach(i => {
                 <div class='dispo'>
                     <h5>${user.nom}</h5>
                     <p class="dispoPara">Annif : ${functionAnnif(user.annif)}</p>
-                    <p class="dispoPara second">${functionDate(user.annif)}</p>
+                    <p class="dispoPara ${funCal(user.annif)}">${functionDate(user.annif)}</p>
                 </div>
                  `
                 ).join("");
@@ -175,9 +174,6 @@ const functionDate = (dateString) => {
                 msg = `Dans ${nombreJour} jours`;
             }
         } else {
-            let hoy = document.querySelectorAll('.dispo .dispoPara.second');
-            console.log(hoy);
-
             let do1 = Math.ceil(Math.floor(Math.abs(nombreJour / 30)));
             if (do1 === 0) {
                 do1 = "";
@@ -195,12 +191,47 @@ const functionDate = (dateString) => {
                 do2 = `${do2} jours`;
             }
             msg = `Dans ${do1}  ${do2}`;
-
         }
     }
 
     return msg;
 };
+
+
+
+
+
+
+
+
+const funCal = (dat) => {
+    let msg = null;
+    dat = `${dat + '/' + date.getFullYear()}`;
+    let nombreJour = (Math.ceil((Date.parse(dat) - Date.parse(date)) / (1000 * 3600 * 24)));
+    if (nombreJour <= 0) {
+        return "second";
+    }
+    else {
+        return "trois";
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (() => {
     let i = -1;

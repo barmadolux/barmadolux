@@ -318,7 +318,16 @@ letter-spacing: 1px;
 font-weight: bold;
 }
 
-@media screen and (max-width : 550px) {
+.trois{
+    font-size: 0.8rem;
+    background-color: rgba(61, 97, 6, 0.738);
+    border-radius: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 5px;
+}
+@media screen and (max-width : 600px) {
     main{
         width: 100%;
     }
