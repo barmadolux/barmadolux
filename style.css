@@ -147,10 +147,9 @@ h6{
 a{
     display: block;
     border-radius: 15px;
-    width: 50%;
+    width: 45%;
     margin: 0;
     padding: 0;
-   
 }
 .info-main{
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -171,21 +170,9 @@ a{
    margin: 3px;
    padding: 5px;
    border-radius: 10px;
-   /* place-self: center; */
    position: relative;
 
 }
-/* .dispo::before{
-    content: "";
-    width: 100px;
-    height: 20px;
-    background-color: rgba(0, 0, 0, 0.514);
-    position: absolute;
-    top: 85%;
-    left: 25%;
-    transform: translateY(-50%);
-    text-align: center;
-} */
 h5{
     text-align: center;
     font-size: 0.9rem;
@@ -232,6 +219,48 @@ img{
     text-align: center;
 }
 
+.event{
+    margin: 10px;
+}
+.event .tabs a{
+    text-decoration: none;
+    float: left;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.159);
+    text-align: center;
+    padding: 10px;
+    margin-left: 5px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.138), 1px 1px 0 rgba(0, 0, 0, 0.838);
+}
+.event .tabs{
+    list-style: none;
+    display: inline-block;
+    width: 380px;
+    margin: 0;
+}
+.tabs .active a{
+    color: rgb(185, 29, 107);
+    background-color: rgba(172, 255, 47, 0.5);
+    border-radius: none;
+}
+.tab-content{
+    display: none;
+    margin: 0px 3px;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.tabs-content{
+    
+}
+.tab-content.active{
+    display: block;
+    background-color: rgba(172, 255, 47, 0.5);
+}
+
+
+
 @media screen and (max-width : 550px) {
     main{
         width: 100%;
@@ -247,5 +276,11 @@ img{
     }
     .item-container{
        flex-flow: row wrap;
+    }
+    .event .tabs{
+        list-style: none;
+        display: inline-block;
+        width: 85vw;
+        margin: 0;
     }
 }

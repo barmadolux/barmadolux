@@ -44,6 +44,52 @@ const functionAnnif = (jourString) => {
     return getJour;
 };
 
+const afficherEvenement = (info) => {
+    let evenementMal = { premier: "Déces de Yvette MAFLON le 10/08/2021" }
+    let evenementHeur = { deuc: "Déces de Yvette MAFLON le 10/08/2021" }
+
+    let heurEvent = () => {
+        let vivi = document.getElementById("heureux");
+        console.log(vivi);
+
+    }
+
+    let malEvent = () => {
+
+    }
+    info.innerHTML =
+        `
+        <div class="event">
+            <ul class="tabs">
+                <li class="active"><a href="#heureux" >Heureux</a></li>
+                <li><a href="#malheureux">Malheureux</a></li>            
+            </ul>
+            <div class="tabs-content">
+                <div class="tab-content active" id="heureux">${heurEvent()}</div>
+                <div class="tab-content" id="malheureux">${malEvent()}</div>
+            </div>
+        </div>
+    `
+    let li = document.querySelectorAll(".event .tabs a");
+    li.forEach(element => {
+        element.addEventListener("click", () => {
+            let div = element.parentNode.parentNode.parentNode
+            if (element.parentNode.classList.contains("active")) {
+                return false
+            }
+            div.querySelector(".tabs .active").classList.remove("active")
+            element.parentNode.classList.add("active")
+
+            let liena = div.querySelector(element.getAttribute("href"))
+            div.querySelector(".tab-content.active").classList.remove("active")
+            liena.classList.add("active");
+
+
+        })
+    });
+
+}
+
 input.forEach(i => {
     i.addEventListener("click", (e) => {
         infoMain.classList.add("addInfoMain");
@@ -73,22 +119,10 @@ input.forEach(i => {
                 ).join("");
         }
         else if (valeur === "PARTICIPATION") {
-            infoMain.innerHTML = "";
+
         }
         else if (valeur === "EVENEMENTS") {
-            infoMain.innerHTML = `  
-                <div class="lool">
-                    <div class="debil">
-                        <input class='' type="checkbox" id="nom">
-                        <label for="nom" >HEUREUX</lable>
-                    </div>
-                   
-                    <div class="debil">
-                        <input class='' type="checkbox" id="surnom">
-                        <label for="surnom">MALHEUREUX</lable>
-                    </div>  
-                </div>
-             `
+            afficherEvenement(infoMain);
         }
         else if (valeur === "LISTE DES MEMBRES") {
             infoMain.innerHTML = table
