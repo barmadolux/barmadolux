@@ -50,7 +50,7 @@ const afficherEvenement = (info) => {
 
     let heurEvent = () => {
         let vivi = document.getElementById("heureux");
-        console.log(vivi);
+        console.log("Je suis ok ");
 
     }
 
@@ -119,7 +119,7 @@ input.forEach(i => {
                 ).join("");
         }
         else if (valeur === "PARTICIPATION") {
-
+            infoMain.innerHTML = " ";
         }
         else if (valeur === "EVENEMENTS") {
             afficherEvenement(infoMain);

@@ -16,7 +16,9 @@ body{
     justify-content: flex-start;
     height: 100%;
 }
-
+.item{
+    padding: 20px;
+}
 .itemCool{
   padding: 20px;
   display: flex;
@@ -41,7 +43,6 @@ header::after{
 }
 
 main{
-    background-color: rgba(0, 0, 0, 0.358);
     width: 30%;   
 }
 aside{
@@ -49,7 +50,6 @@ aside{
 }
 
 footer{
-    background-color: rgba(59, 6, 41, 0.164);
     width: 100%;
   
 }
