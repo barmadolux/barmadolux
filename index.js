@@ -51,8 +51,8 @@ const afficherEvenement = (info) => {
         "Decces de Yvette MAFLON dans la nuit du 23 août 2021",
     ]
     const evenementHeur = [
-        "Célébration du 5èm anniversaire de Decces du feu Romain MAFLON le 27/06/2021,",
-        "Messe d'action de grâce des 28 ans de Decces de Marguérite MAFLON le 12/09/2021 à l'église Catholique Sainte Jeanne d'Arc d'Allada à 6h30min,",
+        "Célébration du 5èm anniversaire de Decces du feu Romain MAFLON le 27 juin 2021,",
+        "Messe d'action de grâce des 28 ans de Decces de Marguérite MAFLON le 12 septembre 2021 à l'église Catholique Sainte Jeanne d'Arc d'Allada à 6h30min,",
     ]
     let heurEvent = (fou) => {
         return fou.map((r) => `
