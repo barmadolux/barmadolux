@@ -46,13 +46,11 @@ const functionAnnif = (jourString) => {
 
 const afficherEvenement = (info) => {
     const evenementMal = [
-        "Décces de Yvette MAFLON le 10/08/2021",
-        "Info 2",
-        "Info 3",
+        "Decces de Yvette MAFLON dans la nuit du 23 août 2021",
     ]
     const evenementHeur = [
-        "Célébration du 5 em anniversaire de Decces du feu Romain MAFLON le 27/06/2021",
-        "Messe d'action de grâce des 28 ans de Decces de Marguérite MAFLON le 12/09/2021",
+        "Célébration du 5èm anniversaire de Decces du feu Romain MAFLON le 27/06/2021,",
+        "Messe d'action de grâce des 28 ans de Decces de Marguérite MAFLON le 12/09/2021 à Allada à 6h30min,",
     ]
     let heurEvent = (fou) => {
         return fou.map((r) => `
@@ -145,10 +143,8 @@ const functionDate = (dateString) => {
     let msg = null;
     dateString = `${dateString + '/' + date.getFullYear()}`;
     let nombreJour = (Math.ceil((Date.parse(dateString) - Date.parse(date)) / (1000 * 3600 * 24)));
-    if (nombreJour <= 0) {
-        if (nombreJour === 0) {
-            msg = "Joyeux Anniversaire";
-        } else if (Math.abs(nombreJour) === 1) {
+    if (nombreJour < 0) {
+        if (Math.abs(nombreJour) === 1) {
             msg = "Passé hier";
         }
         else if (Math.abs(nombreJour) < 30) {
@@ -174,7 +170,9 @@ const functionDate = (dateString) => {
         }
     } else {
         if (nombreJour < 30) {
-            if (nombreJour === 1) {
+            if (nombreJour === 0) {
+                msg = "Joyeux Anniversaire";
+            } else if (nombreJour === 1) {
                 msg = `Dans quelques heures`;
             } else {
                 msg = `Dans ${nombreJour} jours`;
@@ -207,14 +205,16 @@ const funCal = (dat) => {
     let msg = null;
     dat = `${dat + '/' + date.getFullYear()}`;
     let nombreJour = (Math.ceil((Date.parse(dat) - Date.parse(date)) / (1000 * 3600 * 24)));
-    if (nombreJour <= 0) {
+    if (nombreJour < 0) {
         return "second";
+    }
+    else if (nombreJour === 0) {
+        return "joyeuxAnnif";
     }
     else {
         return "trois";
     }
 };
-
 
 (() => {
     let i = -1;
