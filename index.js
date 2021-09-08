@@ -45,15 +45,21 @@ const functionAnnif = (jourString) => {
 };
 
 const afficherEvenement = (info) => {
-    let evenementMal = { premier: "Déces de Yvette MAFLON le 10/08/2021" }
-    let evenementHeur = { deuc: "Déces de Yvette MAFLON le 10/08/2021" }
-    const vivi = document.getElementById("heureux");
-    let heurEvent = () => {
-    }
+    const evenementMal = [
+        "Décces de Yvette MAFLON le 10/08/2021",
+        "Info 2",
+        "Info 3",
+    ]
+    const evenementHeur = [
+        "Célébration du 5 em anniversaire de Decces du feu Romain MAFLON le 27/06/2021",
+        "Messe d'action de grâce des 28 ans de Decces de Marguérite MAFLON le 12/09/2021",
+    ]
+    let heurEvent = (fou) => {
+        return fou.map((r) => `
+            <li class="top-li">${r}</li>
+        `).join("")
+    };
 
-    let malEvent = () => {
-
-    }
     info.innerHTML =
         `
         <div class="event">
@@ -62,8 +68,8 @@ const afficherEvenement = (info) => {
                 <li><a href="#malheureux">Malheureux</a></li>            
             </ul>
             <div class="tabs-content">
-                <div class="tab-content active" id="heureux">${heurEvent()}</div>
-                <div class="tab-content" id="malheureux">${malEvent()}</div>
+                <div class="tab-content active" id="heureux">${heurEvent(evenementHeur)}</div>
+                <div class="tab-content" id="malheureux">${heurEvent(evenementMal)}</div>
             </div>
         </div>
     `
@@ -197,13 +203,6 @@ const functionDate = (dateString) => {
     return msg;
 };
 
-
-
-
-
-
-
-
 const funCal = (dat) => {
     let msg = null;
     dat = `${dat + '/' + date.getFullYear()}`;
@@ -215,22 +214,6 @@ const funCal = (dat) => {
         return "trois";
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 (() => {

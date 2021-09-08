@@ -326,6 +326,15 @@ font-weight: bold;
     color: rgb(255, 255, 255);
     padding: 4px;
 }
+.top-li{
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.171);
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    color: rgb(8, 98, 114);
+    user-select: none;
+}
 @media screen and (max-width : 600px) {
     main{
         width: 100%;
