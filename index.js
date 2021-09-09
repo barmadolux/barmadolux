@@ -31,7 +31,7 @@ const table = [
     { "nom": "APLOGAN Judith", "annif": "05/13", "photo": "./image/ajudithi.png" },
     { "nom": "MAFLON Carine", "annif": "07/06", "photo": "./image/mcarine.png" },
     { "nom": "APLOGAN Léa", "annif": "06/28", "photo": "./image/alea.png" },
-    { "nom": "MEHOU Cédric", "annif": "06/30", "photo": "./image/null.jpg" },
+    { "nom": "MEHOU Cédric", "annif": "08/27", "photo": "./image/null.jpg" },
     { "nom": "ADJAHO Habib", "annif": "05/10", "photo": "./image/ahabib.png" },
     { "nom": "ADJOVI Calbias", "annif": "02/14", "photo": "./image/acalbias.png" },
     { "nom": "MAFLON Romaric", "annif": "06/30", "photo": "./image/null.jpg" },
