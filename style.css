@@ -283,15 +283,19 @@ img{
     margin: 30px 0;
 }
 .formulaire::before{
-    content: "";
+    content: "Nous écrire :";
     position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(10, 126, 155);
-    border-radius: 50%;
-    left: 43%;
+    width: 120px;
+    height: 30px;
+    background-color: rgb(4, 80, 99);
+    border-radius: 10px;
+    left: 35%;
     top: -40px;
     transform: translate(-50% -50%);
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 textarea:focus{
     border: 2px solid rgb(10, 126, 155);
