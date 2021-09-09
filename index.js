@@ -25,19 +25,17 @@ const table = [
     { "nom": "APLOGAN Dorcas", "annif": "08/25", "photo": "./image/adorcas.png" },
     { "nom": "TOHOUN Zackiel", "annif": "07/5", "photo": "./image/tzackiel.png" },
     { "nom": "AHOUANSE Dossou Gérard", "annif": "10/4", "photo": "./image/ado.png" },
-    { "nom": "MAFLON Géoffroy", "annif": "06/30", "photo": "./image/mgeofroi.png" },
+    { "nom": "MAFLON Géoffroy", "annif": "01/12", "photo": "./image/mgeofroi.png" },
     { "nom": "AGBON Furginette", "annif": "06/30", "photo": "./image/afurginette.png" },
     { "nom": "AHOUANSE David", "annif": "09/23", "photo": "./image/adavid.png" },
     { "nom": "APLOGAN Judith", "annif": "05/13", "photo": "./image/ajudithi.png" },
-    { "nom": "MAFLON Carine", "annif": "06/30", "photo": "./image/mcarine.png" },
+    { "nom": "MAFLON Carine", "annif": "07/06", "photo": "./image/mcarine.png" },
     { "nom": "APLOGAN Léa", "annif": "06/28", "photo": "./image/alea.png" },
     { "nom": "MEHOU Cédric", "annif": "06/30", "photo": "./image/null.jpg" },
     { "nom": "ADJAHO Habib", "annif": "05/10", "photo": "./image/ahabib.png" },
     { "nom": "ADJOVI Calbias", "annif": "02/14", "photo": "./image/acalbias.png" },
     { "nom": "MAFLON Romaric", "annif": "06/30", "photo": "./image/null.jpg" },
 ];
-
-
 const functionAnnif = (jourString) => {
     let getJour = new Date(jourString).toLocaleDateString("FR-fr", {
         month: "long",
