@@ -289,9 +289,9 @@ img{
     height: 30px;
     background-color: rgb(4, 80, 99);
     border-radius: 10px;
-    left: 35%;
+    left: 50%;
     top: -40px;
-    transform: translate(-50% -50%);
+    transform: translateX(-50%);
     text-align: center;
     padding-top: 10px;
     color: rgb(255, 255, 255);
