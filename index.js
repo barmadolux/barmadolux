@@ -25,16 +25,16 @@ const table = [
     { "nom": "APLOGAN Dorcas", "annif": "08/25", "photo": "./image/adorcas.png" },
     { "nom": "TOHOUN Zackiel", "annif": "07/5", "photo": "./image/tzackiel.png" },
     { "nom": "AHOUANSE Dossou Gérard", "annif": "10/4", "photo": "./image/ado.png" },
-    { "nom": "MAFLON Géoffroy", "annif": null, "photo": "./image/mgeofroi.png" },
-    { "nom": "AGBON Furginette", "annif": "01/01", "photo": "./image/afurginette.png" },
+    { "nom": "MAFLON Géoffroy", "annif": "06/30", "photo": "./image/mgeofroi.png" },
+    { "nom": "AGBON Furginette", "annif": "06/30", "photo": "./image/afurginette.png" },
     { "nom": "AHOUANSE David", "annif": "09/23", "photo": "./image/adavid.png" },
     { "nom": "APLOGAN Judith", "annif": "05/13", "photo": "./image/ajudithi.png" },
-    { "nom": "MAFLON Carine", "annif": null, "photo": "./image/mcarine.png" },
+    { "nom": "MAFLON Carine", "annif": "06/30", "photo": "./image/mcarine.png" },
     { "nom": "APLOGAN Léa", "annif": "06/28", "photo": "./image/alea.png" },
-    { "nom": "MEHOU Cédric", "annif": null, "photo": "./image/null.jpg" },
+    { "nom": "MEHOU Cédric", "annif": "06/30", "photo": "./image/null.jpg" },
     { "nom": "ADJAHO Habib", "annif": "05/10", "photo": "./image/ahabib.png" },
     { "nom": "ADJOVI Calbias", "annif": "02/14", "photo": "./image/acalbias.png" },
-    { "nom": "MAFLON Romaric", "annif": null, "photo": "./image/null.jpg" },
+    { "nom": "MAFLON Romaric", "annif": "06/30", "photo": "./image/null.jpg" },
 ];
 
 
@@ -145,13 +145,18 @@ const functionDate = (dateString) => {
     let msg = null;
     dateString = `${dateString + '/' + date.getFullYear()}`;
     let nombreJour = (Math.ceil((Date.parse(dateString) - Date.parse(date)) / (1000 * 3600 * 24)));
+    if (Math.abs(nombreJour) > 170) {
+        nombreJour = nombreJour + 365;
+    }
+
     if (nombreJour < 0) {
         if (Math.abs(nombreJour) === 1) {
             msg = "Passé hier";
         }
         else if (Math.abs(nombreJour) < 30) {
             msg = `Passé il y a ${Math.abs(nombreJour)} jours`;
-        } else {
+        }
+        else {
             let jo1 = Math.ceil(Math.floor(Math.abs(nombreJour / 30)));
             if (jo1 === 0) {
                 jo1 = "";
@@ -207,6 +212,9 @@ const funCal = (dat) => {
     let msg = null;
     dat = `${dat + '/' + date.getFullYear()}`;
     let nombreJour = (Math.ceil((Date.parse(dat) - Date.parse(date)) / (1000 * 3600 * 24)));
+    if (Math.abs(nombreJour) > 170) {
+        nombreJour = nombreJour + 365;
+    }
     if (nombreJour < 0) {
         return "second";
     }
