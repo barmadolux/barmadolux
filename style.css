@@ -168,12 +168,11 @@ a{
 }
 .dispo{
    width: 48%;
-   background-color: rgba(167, 65, 47, 0.126);
+   background-color: rgba(145, 135, 53, 0.426);
    margin: 3px;
    padding: 5px;
    border-radius: 10px;
    position: relative;
-
 }
 h5{
     text-align: center;
