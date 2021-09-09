@@ -202,7 +202,11 @@ img{
     align-items: center;
 }
 .dispoPara.second{
-    color: rgb(240, 11, 11);
+    color: rgb(179, 10, 10);
+    background-color: rgba(25, 13, 196, 0.155);
+    border-radius: 10px;
+    padding: 3px 3px;
+    margin: 5px 0;
 }
 
 .change{
@@ -287,7 +291,7 @@ img{
     position: absolute;
     width: 120px;
     height: 30px;
-    background-color: rgb(4, 80, 99);
+    background-color: rgb(10, 126, 155);
     border-radius: 10px;
     left: 50%;
     top: -40px;
