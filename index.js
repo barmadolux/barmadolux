@@ -11,31 +11,34 @@ const para = document.querySelector(".dispoPara.second");
 const date = new Date();
 
 const table = [
-    { "nom": "ADJAHO Venance", "annif": "07/19", "photo": "./image/avenance.png" },
-    { "nom": "LINHOUME Sourou", "annif": "08/25", "photo": "./image/sourou.png" },
-    { "nom": "AHOUANSE Linite", "annif": "05/18", "photo": "./image/alinite.png" },
-    { "nom": "MAFLON Charles", "annif": "08/25", "photo": "./image/mcharles.png" },
-    { "nom": "TOHOUN Olène", "annif": "08/28", "photo": "./image/tolene.png" },
-    { "nom": "MAFLON Barma", "annif": "07/10", "photo": "./image/mbarma.png" },
-    { "nom": "MAFLON Gisèle", "annif": "09/24", "photo": "./image/mgisele.png" },
-    { "nom": "AHOUANSE Judicaelle", "annif": "02/19", "photo": "./image/ajudicaelle.png" },
-    { "nom": "AHOUANSE Judith", "annif": "02/19", "photo": "./image/ajudi.png" },
-    { "nom": "APLOGAN Vicariat", "annif": "05/6", "photo": "./image/avicariat.png" },
-    { "nom": "TOHOUN Loic", "annif": "01/7", "photo": "./image/tloic.png" },
-    { "nom": "APLOGAN Dorcas", "annif": "08/25", "photo": "./image/adorcas.png" },
-    { "nom": "TOHOUN Zackiel", "annif": "07/5", "photo": "./image/tzackiel.png" },
-    { "nom": "AHOUANSE Dossou Gérard", "annif": "10/4", "photo": "./image/ado.png" },
-    { "nom": "MAFLON Géoffroy", "annif": "01/12", "photo": "./image/mgeofroi.png" },
-    { "nom": "AGBON Furginette", "annif": "06/30", "photo": "./image/afurginette.png" },
-    { "nom": "AHOUANSE David", "annif": "09/23", "photo": "./image/adavid.png" },
-    { "nom": "APLOGAN Judith", "annif": "05/13", "photo": "./image/ajudithi.png" },
-    { "nom": "MAFLON Carine", "annif": "07/06", "photo": "./image/mcarine.png" },
-    { "nom": "APLOGAN Léa", "annif": "06/28", "photo": "./image/alea.png" },
-    { "nom": "MEHOU Cédric", "annif": "08/27", "photo": "./image/null.jpg" },
-    { "nom": "ADJAHO Habib", "annif": "05/10", "photo": "./image/ahabib.png" },
-    { "nom": "ADJOVI Calbias", "annif": "02/14", "photo": "./image/acalbias.png" },
-    { "nom": "MAFLON Romaric", "annif": "06/30", "photo": "./image/null.jpg" },
+    { nom: "ADJAHO Venance", annif: "07/19", photo: "./image/avenance.png" },
+    { nom: "LINHOUME Sourou", annif: "08/25", photo: "./image/sourou.png" },
+    { nom: "AHOUANSE Linite", annif: "05/18", photo: "./image/alinite.png" },
+    { nom: "MAFLON Charles", annif: "08/25", photo: "./image/mcharles.png" },
+    { nom: "TOHOUN Olène", annif: "08/28", photo: "./image/tolene.png" },
+    { nom: "MAFLON Barma", annif: "07/10", photo: "./image/mbarma.png" },
+    { nom: "MAFLON Gisèle", annif: "09/24", photo: "./image/mgisele.png" },
+    { nom: "AHOUANSE Judicaelle", annif: "02/19", photo: "./image/ajudicaelle.png" },
+    { nom: "AHOUANSE Judith", annif: "02/19", photo: "./image/ajudi.png" },
+    { nom: "APLOGAN Vicariat", annif: "05/6", photo: "./image/avicariat.png" },
+    { nom: "TOHOUN Loic", annif: "01/7", photo: "./image/tloic.png" },
+    { nom: "APLOGAN Dorcas", annif: "08/25", photo: "./image/adorcas.png" },
+    { nom: "TOHOUN Zackiel", annif: "07/5", photo: "./image/tzackiel.png" },
+    { nom: "AHOUANSE Dossou Gérard", annif: "10/4", photo: "./image/ado.png" },
+    { nom: "MAFLON Géoffroy", annif: "01/09", photo: "./image/mgeofroi.png" },
+    { nom: "AGBON Furginette", annif: "06/30", photo: "./image/afurginette.png" },
+    { nom: "AHOUANSE David", annif: "09/23", photo: "./image/adavid.png" },
+    { nom: "APLOGAN Judith", annif: "05/13", photo: "./image/ajudithi.png" },
+    { nom: "MAFLON Carine", annif: "01/12", photo: "./image/mcarine.png" },
+    { nom: "APLOGAN Léa", annif: "06/28", photo: "./image/alea.png" },
+    { nom: "MEHOU Cédric", annif: "08/27", photo: "./image/null.jpg" },
+    { nom: "ADJAHO Habib", annif: "05/10", photo: "./image/ahabib.png" },
+    { nom: "ADJOVI Calbias", annif: "02/14", photo: "./image/acalbias.png" },
+    { nom: "MAFLON Romaric", annif: "06/30", photo: "./image/null.jpg" },
 ];
+
+
+
 const functionAnnif = (jourString) => {
     let getJour = new Date(jourString).toLocaleDateString("FR-fr", {
         month: "long",
@@ -43,6 +46,30 @@ const functionAnnif = (jourString) => {
     })
     return getJour;
 };
+
+function SortElement(copytab) {
+    let copyTable = [...copytab];
+    copyTable.sort((a, b) => {
+        if (a.annif < b.annif) {
+            return -1
+        } else {
+            return 1
+        }
+    });
+    return copyTable
+}
+
+function SortElementByName(copytab) {
+    let copyTable = [...copytab];
+    copyTable.sort((a, b) => {
+        if (a.nom < b.nom) {
+            return -1
+        } else {
+            return 1
+        }
+    });
+    return copyTable
+}
 
 const afficherEvenement = (info) => {
     const evenementMal = [
@@ -108,7 +135,8 @@ input.forEach(i => {
         info.innerHTML = `<span class="info-head" > : ${i.value} </span > `;
 
         if (valeur === "ANNIVERSAIRES") {
-            infoMain.innerHTML = table
+            let nouTable = SortElement(table)
+            infoMain.innerHTML = nouTable
                 .map((user) =>
                     `  
                 <div class='dispo'>
@@ -126,7 +154,8 @@ input.forEach(i => {
             afficherEvenement(infoMain);
         }
         else if (valeur === "LISTE DES MEMBRES") {
-            infoMain.innerHTML = table
+            let tableSortName = SortElementByName(table)
+            infoMain.innerHTML = tableSortName
                 .map((user) =>
                     `
                 <div class='dispo'>
